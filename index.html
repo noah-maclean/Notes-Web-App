@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles.css">
+
+        <script defer src="index.js"></script> 
+        <title>Notes</title>    
+    </head>
+
+    <body>
+        <h1 id="title">Notes</h1>
+
+        <div class="notes">
+            <div class="column">
+                <div class="row">
+                    <input type="button" class="noteButton" value="Note 1" onclick="displayNote(1);">
+                    <input type="button" class="noteButton" value="Note 2" onclick="displayNote(2);">
+                    <input type="button" class="noteButton" value="Note 3" onclick="displayNote(3);">
+                </div>
+            </div>
+        </div>
+
+        <div id="note">
+            <h1 id="noteTitle">Note 1</h1>
+            <input type="text" class="noteText">
+
+            <div class="buttons">
+                <input type="button" class="saveButton" value="Save" onclick="hideNote();">
+                <input type="button" class="closeButton" value="Close" onclick="hideNote();">
+            </div>
+            
+        </div>
+    </body>
+</html>
