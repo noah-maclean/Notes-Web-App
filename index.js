@@ -3,6 +3,7 @@
 var activeNote;
 const noteTexts = ["", "", "", "", "", ""];
 const noteSaved = [false, false, false, false, false, false]
+const noteTitles = ["Note 1", "Note 2", "Note 3", "Note 4", "Note 5", "Note 6"];
 
 const note = document.getElementById("note");
 const noteTitle = document.getElementById("noteTitle");
@@ -17,7 +18,8 @@ noteTitle.addEventListener("click", function() {
 
 function displayNote(currentNote) {
     note.style.display = "flex";
-    noteTitle.textContent = `Note ${currentNote}`
+    // noteTitle.textContent = `Note ${currentNote}`
+    noteTitle.textContent = noteTitles[currentNote];
 
     // if (noteSaved[currentNote] === true){
     //     // alert("note has been saved");
@@ -43,16 +45,31 @@ function hideNote() {
 
 function saveNote() {
     // document.getElementById("note").style.display = "none";
-    noteTexts[activeNote] = noteText.value;
     saveMessage.style.opacity = 1;
     // alert(noteTexts[activeNote]);
-    noteSaved[activeNote] = true;
+    // noteSaved[activeNote] = true;
     // alert(noteSaved[activeNote])
     // var firstSpace = noteTexts[activeNote].indexOf(" ");
     // document.getElementById(`note${activeNote}`).value = noteTexts[activeNote].substring(0, firstSpace); 
-    document.getElementById(`note${activeNote}`).value = noteTexts[activeNote]
+    
+    if (noteText.value !== ""){
+        noteTexts[activeNote ] = noteText.value;
+        document.getElementById(`note${activeNote + 1}`).value = noteTexts[activeNote];
+    }
+    else {
+        noteTexts[activeNote] 
+    }
 }
 
 function saveTitle() {
-    changeTitleHolder.style.display = "none";
+    // alert(changeTitleInput.value)
+    if (changeTitleInput.value !== ""){
+        noteTitles[activeNote] = changeTitleInput.value;
+        noteTitle.textContent = noteTitles[activeNote];
+        changeTitleHolder.style.display = "none";
+    // alert(changeTitleInput.value)
+    }
+    else {
+        changeTitleHolder.style.display = "none";
+    }
 }

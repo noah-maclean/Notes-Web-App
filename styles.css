@@ -11,24 +11,35 @@ body {
     text-decoration: underline;
 }
 
-.notes {
+/* .notes {
     width: 100%;
     height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+} */
+
+.notes {
+    width: 95%;
+    height: 80vh;
+    display: grid;
+    /* flex-direction: column;
+    align-items: center; */
+    gap: 5% 2%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-.column {
+/* .column {
     align-items: center;
     width: 100%;
     flex: 33%;
     height: 100%;
-}
+} */
 
-.row {
+/* .row {
     height: 50%;
-}
+} */
 
 #note {
     position: fixed;
@@ -47,10 +58,12 @@ body {
 }
 
 .noteButton {
-    width: 32%;
+    width: 100%;
     height: 100%;
-    margin: 5px 5px;
+    /* margin: 5px 5px; */
     font-size: 32px;
+    white-space: normal;
+    word-break: break-all;
 }
 
 #noteText {
