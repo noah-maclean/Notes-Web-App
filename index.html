@@ -30,7 +30,13 @@
 
         <div id="note">
             <h1 id="noteTitle">Note 1</h1>
-            <textarea id="noteText"></textarea>
+            <textarea id="noteText" placeholder="Begin note..."></textarea>
+
+            <div id="changeTitle">
+                <h2 id="changeTitleText">Change title:</h2>
+                <input type="text" id="changeTitleInput">
+                <input type="button" id="saveTitleButton" value="Save" onclick="saveTitle();">
+            </div>
             
             <div class="buttonRow">
                 <input type="button" id="saveButton" value="Save" onclick="saveNote();">
