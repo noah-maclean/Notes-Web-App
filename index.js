@@ -1,5 +1,5 @@
-// let noteActive = false;
-// var currentNote;
+// add some form of storage/database integration to save the note texts between sessions
+
 var activeNote;
 const noteTexts = ["", "", "", "", "", ""];
 const noteSaved = [false, false, false, false, false, false]
@@ -18,40 +18,22 @@ noteTitle.addEventListener("click", function() {
 
 function displayNote(currentNote) {
     note.style.display = "flex";
-    // noteTitle.textContent = `Note ${currentNote}`
+
     noteTitle.textContent = noteTitles[currentNote];
 
-    // if (noteSaved[currentNote] === true){
-    //     // alert("note has been saved");
-    //     var firstSpace = noteTexts[currentNote].indexOf(" ");
-    //     // alert(firstSpace)
-    //     // alert(noteTexts[currentNote].substring(0, firstSpace));
-    //     noteTitle.textContent = noteTexts[currentNote].substring(0, firstSpace)
-    // } else {
-    //     noteTitle.textContent = `Note ${currentNote}`;
-    // }
-    
     noteText.value = noteTexts[currentNote];
     saveMessage.style.opacity = 0;
-    // noteActive = true;
+    
     activeNote = currentNote;
 }
 
 function hideNote() {
     note.style.display = "none";
-    // noteText.value = null;
-    // noteActive = false;
 }
 
 function saveNote() {
-    // document.getElementById("note").style.display = "none";
     saveMessage.style.opacity = 1;
-    // alert(noteTexts[activeNote]);
-    // noteSaved[activeNote] = true;
-    // alert(noteSaved[activeNote])
-    // var firstSpace = noteTexts[activeNote].indexOf(" ");
-    // document.getElementById(`note${activeNote}`).value = noteTexts[activeNote].substring(0, firstSpace); 
-    
+        
     if (noteText.value !== ""){
         noteTexts[activeNote] = noteText.value;
         document.getElementById(`note${activeNote + 1}`).value = noteTexts[activeNote];
@@ -64,12 +46,10 @@ function saveNote() {
 }
 
 function saveTitle() {
-    // alert(changeTitleInput.value)
     if (changeTitleInput.value !== ""){
         noteTitles[activeNote] = changeTitleInput.value;
         noteTitle.textContent = noteTitles[activeNote];
         changeTitleHolder.style.display = "none";
-    // alert(changeTitleInput.value)
     }
     else {
         changeTitleHolder.style.display = "none";

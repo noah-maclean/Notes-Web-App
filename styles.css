@@ -11,35 +11,38 @@ body {
     text-decoration: underline;
 }
 
-/* .notes {
+#searchBarHolder {
     width: 100%;
-    height: 50vh;
+    height: 4vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+    justify-content: center;
+    padding: 0% 1em 1em;
+}
+
+#searchBar {
+    all: unset;
+    width:20%;
+    height: 100%;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b9b9b9;
+    box-sizing: border-box;
+    color: #3c4043;
+    padding: 0.5em;
+}
 
 #notes {
     width: 95%;
     height: 80vh;
     display: grid;
-    /* flex-direction: column;
-    align-items: center; */
     gap: 5% 2%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr) ;
 }
 
-/* .column {
-    align-items: center;
-    width: 100%;
-    flex: 33%;
-    height: 100%;
-} */
-
-/* .row {
-    height: 50%;
-} */
 
 #note {
     position: fixed;
@@ -60,7 +63,6 @@ body {
 .noteButton {
     width: 100%;
     height: 100%;
-    /* margin: 5px 5px; */
     font-size: 32px;
     white-space: normal;
     word-break: break-all;
@@ -93,56 +95,49 @@ body {
     border-radius: 8px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
+    resize: none;
 }
 
-/* .buttonColumn {
-    align-items: center;
-    width: 100%;
-    flex: 50%;
-} */
-
 .buttonRow {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: baseline;
     height: 10%;
     width: 100%;
-    /* padding: 10%; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* place-items: center; */
-    /* place-content: center; */
-    align-content: center;
-    gap: 0% 5%;
-    /* top: 5%; */
-
 }
 
 /* buttons get smaller when aligning them */
 
-#saveButton {
-    /* display: table-cell; */
-    /* float: inline-start; */
-    /* left: 10%; */
-    width: 100%;
-    height: 100%;
-    /* padding: 10%; */
+.buttonRow input {
+    height: 80%;
+    flex-basis: 45%;
+    margin: auto;
+
+    appearance: none;
+    background-color: #fff;
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 1.5px 2.5px -0.5px,rgba(0, 0, 0, .14) 0 3px 5px 0,rgba(0, 0, 0, .12) 0 0.5px 9px 0;
+    box-sizing: border-box;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-#closeButton {
-    /* display: table-cell; */
-    /* float: inline-end; */
-    /* right: 10%; */
-    width: 100%;
-    height: 100%;
+.buttonRow input:hover {
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #b9b9b9;
 }
 
 #saveMessageHolder {
-    width: 100%;
+    width: 95%;
 }
 
 #saveMessage {
     text-align: center;
-    padding: 5px;
+    padding: 1%;
     border: 1px solid black;
     background-color: rgba(3, 219, 57, 0.274);
     opacity: 0;
