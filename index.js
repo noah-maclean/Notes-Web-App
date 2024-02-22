@@ -53,12 +53,14 @@ function saveNote() {
     // document.getElementById(`note${activeNote}`).value = noteTexts[activeNote].substring(0, firstSpace); 
     
     if (noteText.value !== ""){
-        noteTexts[activeNote ] = noteText.value;
+        noteTexts[activeNote] = noteText.value;
         document.getElementById(`note${activeNote + 1}`).value = noteTexts[activeNote];
     }
     else {
-        noteTexts[activeNote] 
-    }
+        noteTexts[activeNote] = "";
+        noteTitles[activeNote] = `Note ${activeNote + 1}`;
+        document.getElementById(`note${activeNote + 1}`).value = noteTitles[activeNote];
+    }   
 }
 
 function saveTitle() {
