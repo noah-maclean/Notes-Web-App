@@ -14,10 +14,10 @@
     <body>
         <h1 id="title">Notes</h1>
 
-        <!-- make the search image look nicer -->
+        <!-- TODO: make the search image look nicer -->
         <nav id="searchBarHolder"> 
             <input type="text" id="searchBar" placeholder="Search">
-            <input type="button" id="searchButton" value="Submit"> <!-- add search image -->
+            <input type="button" id="searchButton" value="Submit"> <!-- TODO: add search image -->
         </nav>
 
         <div id="notes">
@@ -31,10 +31,12 @@
         </div>
 
         <div id="note">
-            <h1 id="noteTitle">Note 1</h1>
+            
+            <!-- <h1 id="noteTitle"></h1> -->
+            <input type="button" id="noteTitle" value="Note1"onclick="displayChangeTitle();">
             <textarea id="noteText" placeholder="Begin note..."></textarea>
             
-            <!-- make the change title page/popup look better -->
+            <!-- TODO: make the change title page/popup look better -->
             <div id="changeTitle">
                 <h2 id="changeTitleText">Change title:</h2>
                 <input type="text" id="changeTitleInput">
@@ -46,8 +48,6 @@
                 <input type="button" id="closeButton" value="Close" onclick="hideNote();">
             </div>
 
-            <!-- make the position of the save message absolute so that it displays 
-            over the note and disappears a sec or two after appearing -->
             <div id="saveMessageHolder">
                 <h2 id="saveMessage">Note saved!</h2>
             </div>
