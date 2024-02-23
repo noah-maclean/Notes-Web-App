@@ -163,7 +163,7 @@ body {
     height: 100%;
     text-align: center;
     align-items: center;
-    padding: 1%;
+    padding: 2% 0;
     border: 1px solid black;
     background-color: rgba(56, 158, 81, 0.95);
     border-radius: 8px;
