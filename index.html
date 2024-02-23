@@ -7,20 +7,22 @@
 
         <link rel="stylesheet" href="styles.css">
 
-        <script defer src="index.js"></script> 
+        <script defer src="index.js"></script>
         <title>Notes</title>    
     </head>
 
     <body>
         <h1 id="title">Notes</h1>
 
-        <!-- TODO: make the search image look nicer -->
+        <!-- TODO: make the search bar look nicer -->
         <nav id="searchBarHolder"> 
-            <input type="text" id="searchBar" placeholder="Search">
+            <input type="text" id="searchBar" placeholder="Search" autocomplete="off">
+            <!-- TODO: change to button -->
             <input type="button" id="searchButton" value="Submit"> <!-- TODO: add search image -->
         </nav>
 
         <div id="notes">
+            <!-- TODO: change all to buttons -->
             <input type="button" class="noteButton" id="note1" value="Note 1" onclick="displayNote(0);">
             <input type="button" class="noteButton" id="note2" value="Note 2" onclick="displayNote(1);">
             <input type="button" class="noteButton" id="note3" value="Note 3" onclick="displayNote(2);">
@@ -33,17 +35,20 @@
         <div id="note">
             
             <!-- <h1 id="noteTitle"></h1> -->
+            <!-- TODO: change to button -->
             <input type="button" id="noteTitle" value="Note1"onclick="displayChangeTitle();">
             <textarea id="noteText" placeholder="Begin note..."></textarea>
             
             <!-- TODO: make the change title page/popup look better -->
             <div id="changeTitle">
                 <h2 id="changeTitleText">Change title:</h2>
-                <input type="text" id="changeTitleInput">
+                <input type="text" id="changeTitleInput" maxlength="24" autocomplete="off">
+                <!-- TODO: change to button -->
                 <input type="button" id="saveTitleButton" value="Save" onclick="saveTitle();">
             </div>
             
             <div class="buttonRow">
+                <!-- TODO: change to buttons -->
                 <input type="button" id="saveButton" value="Save" onclick="saveNote();">
                 <input type="button" id="closeButton" value="Close" onclick="hideNote();">
             </div>
